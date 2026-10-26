@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi página</title>
+  <link rel="stylesheet" href="stylesF.css">
+</head>
+<section class="formulario-seccion">
+
+    <h2>Formulario de Contacto</h2>
+
+    <form id="formularioContacto" novalidate>
+
+        <!-- NOMBRE -->
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                minlength="3"
+                maxlength="30"
+                required
+                placeholder="Escribe tu nombre"
+            >
+
+            <small class="mensaje-error" id="errorNombre"></small>
+        </div>
+
+
+        <!-- APELLIDO -->
+        <div class="campo">
+            <label for="apellido">Apellido:</label>
+
+            <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                minlength="3"
+                maxlength="30"
+                required
+                placeholder="Escribe tu apellido"
+            >
+
+            <small class="mensaje-error" id="errorApellido"></small>
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="campo">
+            <label for="email">Correo electrónico:</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                maxlength="100"
+                required
+                placeholder="ejemplo@correo.com"
+            >
+
+            <small class="mensaje-error" id="errorEmail"></small>
+        </div>
+
+
+        <!-- TELEFONO -->
+        <div class="campo">
+            <label for="telefono">Número de teléfono:</label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                minlength="7"
+                maxlength="10"
+                required
+                placeholder="3001234567"
+            >
+
+            <small class="mensaje-error" id="errorTelefono"></small>
+        </div>
+
+
+        <!-- ASUNTO -->
+        <div class="campo">
+            <label for="asunto">Asunto:</label>
+
+            <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                minlength="5"
+                maxlength="80"
+                required
+                placeholder="Escribe el asunto"
+            >
+
+            <small class="mensaje-error" id="errorAsunto"></small>
+        </div>
+
+
+        <!-- MENSAJE -->
+        <div class="campo">
+            <label for="mensaje">Mensaje:</label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                minlength="10"
+                maxlength="500"
+                required
+                placeholder="Escribe tu mensaje"
+            ></textarea>
+
+            <small class="mensaje-error" id="errorMensaje"></small>
+        </div>
+
+
+        <!-- BOTON -->
+        <button type="submit">
+            Enviar formulario
+        </button>
+
+        <!-- MENSAJE FINAL -->
+        <p id="mensajeExito"></p>
+        <nav class="barra-navegacion" style="text-align: center; margin-top: 20px;">
+  <a href="index.html">← Volver al inicio</a>
+</nav>
+
+    </form>
+
+</section>

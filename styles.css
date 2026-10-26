@@ -1,0 +1,553 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #011a4e4d;
+    color: #006effbb;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    background-color: #0d583f;
+    color: rgb(0, 0, 0);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("https://www.shutterstock.com/image-vector/cheer-black-colour-design-logo-260nw-2386539701.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+    padding: 80px 8%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.fondo {
+    background-color: #f2f2f2;
+}
+
+.texto-centro {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+    background-color: #0077cc;
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.galeria img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   CALCULADORA
+========================= */
+
+.calculadora {
+    max-width: 400px;
+
+    margin: auto;
+
+    text-align: center;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calculadora input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+}
+
+.botones-calculadora {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+form {
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-family: Arial;
+}
+
+form textarea {
+    height: 150px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    background-color: #222222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ================================
+   NUEVO FORMULARIO DE CONTACTO
+================================ */
+
+.formulario-seccion {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.campo input.error,
+.campo textarea.error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.campo input.correcto,
+.campo textarea.correcto {
+    border-color: #198754;
+    background-color: #f5fff8;
+}
+
+.mensaje-error {
+    display: block;
+    margin-top: 5px;
+    color: #dc3545;
+    font-size: 14px;
+    min-height: 18px;
+}
+
+#contacto button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#mensajeExito {
+    color: #198754;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+/* ================================
+   FORMULARIO
+================================ */
+
+.formulario-seccion {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.formulario-seccion h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+
+/* ETIQUETAS */
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+
+/* INPUTS Y TEXTAREA */
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+/* TEXTAREA */
+
+.campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+
+/* CUANDO EL USUARIO SELECCIONA EL CAMPO */
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+
+/* CAMPO CON ERROR */
+
+.campo input.error,
+.campo textarea.error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+
+/* CAMPO CORRECTO */
+
+.campo input.correcto,
+.campo textarea.correcto {
+    border-color: #198754;
+    background-color: #f5fff8;
+}
+
+
+/* MENSAJE DE ERROR */
+
+.mensaje-error {
+    display: block;
+    margin-top: 5px;
+    color: #dc3545;
+    font-size: 14px;
+    min-height: 18px;
+}
+
+
+/* BOTON */
+
+.formulario-seccion button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* BOTON HOVER */
+
+.formulario-seccion button:hover {
+    background-color: #0056b3;
+}
+
+
+/* MENSAJE DE EXITO */
+
+#mensajeExito {
+    color: #198754;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}

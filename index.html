@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DESTREZA CHEER</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header>
+
+        <div class="logo">
+            MUNDO DE CABEZA
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+           <a href="FORMULARIO.html">Registrarse</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         SECCIÓN PRINCIPAL
+    ========================== -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+
+            <h1>Bienvenido a Destreza Cheer</h1>
+
+            <p>
+                Aqui aprenderas cosas basicas acerca de como se practica este deporte.
+
+                Este deporte no es para cualquiera, debes ser arriesgado, tener confianza y ser muy agil.
+            </p>
+
+            <button onclick="mostrarMensaje()">
+                Clic aqui si te sientes digno
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+    <section id="nosotros" class="section">
+
+        <h2>QUE ESEL CHEER?</h2>
+
+        <p class="texto-centro">
+            Es un deporte competitivo de alto riesgo el cual se conforma de diferentes habilidades, Partner Stunt, Gimnasia, Saltos, Baile, Lanzamientos y piramides y/o acrobacias grupales
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+    <section id="servicios" class="section fondo">
+
+        <h2>Servicios</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Servicio 01</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
+                <button onclick="mostrarServicio('Servicio 01')">
+                    Ver más
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h3>Servicio 02</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
+                <button onclick="mostrarServicio('Servicio 02')">
+                    Ver más
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h3>Servicio 03</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
+                <button onclick="mostrarServicio('Servicio 03')">
+                    Ver más
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERÍA
+    ========================== -->
+    <section id="galeria" class="section">
+
+        <h2>Galería</h2>
+
+        <div class="galeria">
+
+            <img
+                src="BACKFLIP.jpeg"
+                alt="Imagen 1"
+                onclick="ampliarImagen(this)"
+            >
+
+            <img
+                src="LIBERTY.jfif"
+                alt="Imagen 2"
+                onclick="ampliarImagen(this)"
+            >
+
+            <img
+                src="COPA.webp"
+                alt="Imagen 3"
+                onclick="ampliarImagen(this)"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALCULADORA
+    ========================== -->
+    <section class="section fondo">
+
+        <h2>Calculadora</h2>
+
+        <div class="calculadora">
+
+            <input
+                type="number"
+                id="numero1"
+                placeholder="Número 1"
+            >
+
+            <input
+                type="number"
+                id="numero2"
+                placeholder="Número 2"
+            >
+
+            <div class="botones-calculadora">
+
+                <button onclick="sumar()">
+                    +
+                </button>
+
+                <button onclick="restar()">
+                    -
+                </button>
+
+                <button onclick="multiplicar()">
+                    ×
+                </button>
+
+                <button onclick="dividir()">
+                    ÷
+                </button>
+
+            </div>
+
+            <h3 id="resultado">
+                Resultado: 0
+            </h3>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+    <section id="contacto" class="section">
+
+    <h2>Formulario de Contacto</h2>
+
+    <form id="formularioContacto" novalidate>
+
+        <!-- NOMBRE -->
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                minlength="3"
+                maxlength="30"
+                required
+                placeholder="Escribe tu nombre"
+            >
+
+            <small class="mensaje-error" id="errorNombre"></small>
+        </div>
+
+
+        <!-- APELLIDO -->
+        <div class="campo">
+            <label for="apellido">Apellido:</label>
+
+            <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                minlength="3"
+                maxlength="30"
+                required
+                placeholder="Escribe tu apellido"
+            >
+
+            <small class="mensaje-error" id="errorApellido"></small>
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="campo">
+            <label for="email">Correo electrónico:</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                maxlength="100"
+                required
+                placeholder="ejemplo@correo.com"
+            >
+
+            <small class="mensaje-error" id="errorEmail"></small>
+        </div>
+
+
+        <!-- TELEFONO -->
+        <div class="campo">
+            <label for="telefono">Número de teléfono:</label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                minlength="7"
+                maxlength="10"
+                required
+                placeholder="3001234567"
+            >
+
+            <small class="mensaje-error" id="errorTelefono"></small>
+        </div>
+
+
+        <!-- ASUNTO -->
+        <div class="campo">
+            <label for="asunto">Asunto:</label>
+
+            <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                minlength="5"
+                maxlength="80"
+                required
+                placeholder="Escribe el asunto"
+            >
+
+            <small class="mensaje-error" id="errorAsunto"></small>
+        </div>
+
+
+        <!-- MENSAJE -->
+        <div class="campo">
+            <label for="mensaje">Mensaje:</label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                minlength="10"
+                maxlength="500"
+                required
+                placeholder="Escribe tu mensaje"
+            ></textarea>
+
+            <small class="mensaje-error" id="errorMensaje"></small>
+        </div>
+
+
+        <!-- BOTON -->
+        <button type="submit">
+            Enviar formulario
+        </button>
+
+        <!-- MENSAJE FINAL -->
+        <p id="mensajeExito"></p>
+
+    </form>
+
+</section>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer>
+
+        <p>
+            © 2026 Lorem Ipsum - Plantilla educativa
+        </p>
+
+        <p>
+            Página creada con HTML, CSS y JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- Conexión con JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
