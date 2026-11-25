@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spinal Technologies: componentes, computadores, periféricos y servicio técnico especializado.">
+  <title>Spinal Technologies | Hardware y soporte técnico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Spinal Technologies, inicio">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 2v20M7 5h10M8 9h8M9 13h6M10 17h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span>Spinal<b>Tech</b></span>
+    </a>
+    <nav id="nav" class="nav" aria-label="Principal">
+      <a href="#categorias">Categorías</a>
+      <a href="#catalogo" data-filter="computadores">Computadores</a>
+      <a href="#catalogo" data-filter="perifericos">Periféricos</a>
+      <a href="#catalogo" data-filter="componentes">Componentes</a>
+      <a href="#servicios">Servicios</a>
+    </nav>
+    <div class="actions">
+      <div id="auth" class="auth">
+        <button class="btn ghost" data-auth="login">Ingresar</button>
+        <button class="btn primary" data-auth="register">Registrarse</button>
+      </div>
+      <button class="icon-btn" id="cartBtn" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.2a1 1 0 0 0 1-.8L19 8H6.2M9 20h.01M17 20h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="cartCount" class="badge">0</span>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="status"><i></i> Taller y tienda abiertos</p>
+        <h1>Hardware que rinde. Soporte que responde.</h1>
+        <p class="lead">Vendemos memorias RAM, procesadores, computadores y periféricos, y los dejamos funcionando con servicio técnico y asesoría para armar tu equipo.</p>
+        <div class="cta">
+          <a class="btn primary" href="#catalogo">Ver catálogo</a>
+          <a class="btn ghost" href="#servicios">Solicitar asesoría</a>
+        </div>
+        <dl class="stats">
+          <div><dt>Garantía</dt><dd>12 meses</dd></div>
+          <div><dt>Diagnóstico</dt><dd>Gratis</dd></div>
+          <div><dt>Envíos</dt><dd>Todo el país</dd></div>
+        </dl>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" class="chip">
+          <g class="traces" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M150 120V30M200 120V10M250 120V40M150 280v90M200 280v110M250 280v80M120 150H20M120 200H0M120 250H30M280 150h100M280 200h120M280 250h90"/>
+          </g>
+          <rect x="120" y="120" width="160" height="160" rx="14" class="die"/>
+          <rect x="155" y="155" width="90" height="90" rx="8" class="core"/>
+          <text x="200" y="207" text-anchor="middle" class="chip-text">SPINAL</text>
+        </svg>
+      </div>
+    </section>
+
+    <section id="categorias" class="section">
+      <h2>Categorías</h2>
+      <div class="cat-grid">
+        <button class="cat glass" data-filter="componentes"><span class="cat-ico" data-art="cpu"></span><strong>Componentes</strong><small>Procesadores, RAM, SSD, tarjetas gráficas</small></button>
+        <button class="cat glass" data-filter="computadores"><span class="cat-ico" data-art="laptop"></span><strong>Computadores</strong><small>Portátiles y equipos de escritorio</small></button>
+        <button class="cat glass" data-filter="perifericos"><span class="cat-ico" data-art="keyboard"></span><strong>Periféricos</strong><small>Teclados, mouse, monitores, audífonos</small></button>
+        <a class="cat glass" href="#servicios"><span class="cat-ico" data-art="wrench"></span><strong>Servicios</strong><small>Soporte técnico y asesorías</small></a>
+      </div>
+    </section>
+
+    <section id="catalogo" class="section">
+      <div class="section-head">
+        <h2>Catálogo</h2>
+        <div class="chips" role="group" aria-label="Filtrar productos">
+          <button class="chip-btn is-active" data-filter="todos">Todos</button>
+          <button class="chip-btn" data-filter="componentes">Componentes</button>
+          <button class="chip-btn" data-filter="computadores">Computadores</button>
+          <button class="chip-btn" data-filter="perifericos">Periféricos</button>
+        </div>
+      </div>
+      <div id="grid" class="grid" aria-live="polite"></div>
+      <p class="note">Los productos y precios son de ejemplo.</p>
+    </section>
+
+    <section id="servicios" class="section">
+      <h2>Servicios técnicos</h2>
+      <div class="svc-grid">
+        <article class="glass svc"><h3>Mantenimiento preventivo</h3><p>Limpieza interna, cambio de pasta térmica y revisión de temperaturas.</p></article>
+        <article class="glass svc"><h3>Reparación y diagnóstico</h3><p>Detectamos fallas de placa, fuente, pantalla o almacenamiento y te damos un presupuesto claro.</p></article>
+        <article class="glass svc"><h3>Ensamble a medida</h3><p>Armamos tu PC con los componentes que elijas, con cableado ordenado y pruebas de estrés.</p></article>
+        <article class="glass svc"><h3>Recuperación de datos</h3><p>Rescatamos archivos de discos dañados y migramos tu información a un equipo nuevo.</p></article>
+      </div>
+      <form id="advice" class="glass advice" novalidate>
+        <div>
+          <h3>Pide una asesoría</h3>
+          <p>Cuéntanos qué necesitas y te respondemos con una recomendación de equipo y presupuesto.</p>
+        </div>
+        <label>Correo<input type="email" name="email" placeholder="tu@correo.com" required></label>
+        <label>Uso principal
+          <select name="uso"><option>Gaming</option><option>Diseño y edición</option><option>Oficina y estudio</option><option>Programación</option></select>
+        </label>
+        <button class="btn primary" type="submit">Solicitar asesoría</button>
+        <p class="form-msg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Spinal Technologies</span>
+    <span>Insumos tecnológicos, equipos y servicio técnico</span>
+  </footer>
+
+  <aside id="cart" class="cart glass" aria-label="Carrito" hidden>
+    <div class="cart-head"><h3>Tu carrito</h3><button class="icon-btn" id="cartClose" aria-label="Cerrar carrito">✕</button></div>
+    <ul id="cartList" class="cart-list"></ul>
+    <div class="cart-foot"><span>Total</span><strong id="cartTotal">$0</strong></div>
+    <button class="btn primary" id="checkout">Finalizar compra</button>
+  </aside>
+
+  <dialog id="authDialog" class="dialog glass">
+    <form id="authForm" method="dialog" novalidate>
+      <div class="cart-head"><h3 id="authTitle">Crear cuenta</h3><button class="icon-btn" type="button" id="authClose" aria-label="Cerrar">✕</button></div>
+      <label data-only="register">Nombre completo<input name="nombre" autocomplete="name" minlength="2" maxlength="60"><small class="field-err" data-err="nombre"></small></label>
+      <label>Correo<input type="email" name="email" autocomplete="email" placeholder="tu@gmail.com" required><small class="field-err" data-err="email"></small></label>
+      <label>Contraseña<input type="password" name="pass" autocomplete="new-password" required><small class="field-err" data-err="pass"></small></label>
+      <ul class="rules" id="passRules" data-only="register" aria-label="Requisitos de la contraseña">
+        <li data-rule="len">Más de 8 caracteres</li>
+        <li data-rule="letter">Al menos una letra</li>
+        <li data-rule="num">Al menos un número</li>
+        <li data-rule="space">Sin espacios</li>
+      </ul>
+      <p class="form-msg" role="alert"></p>
+      <button class="btn primary" type="submit" id="authSubmit">Registrarse</button>
+      <button class="link" type="button" id="authSwitch">¿Ya tienes cuenta? Ingresar</button>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
